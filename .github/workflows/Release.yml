@@ -1,0 +1,30 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release-zips:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Find LabVIEW directories and create zips
+      id: create_zips
+      run: |
+        for dir in LabVIEW_*; do
+          if [ -d "$dir" ]; then
+            zip -r "UnderAutomation.Yaskawa_${dir}.zip" "$dir"
+          fi
+        done
+        
+    - name: Upload assets
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "*.zip"
+        bodyFile: "whatsNew.md"
+        token: ${{ secrets.GITHUB_TOKEN }}

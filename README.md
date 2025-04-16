@@ -1,4 +1,4 @@
-# Fanuc LabVIEW Library
+# Yaskawa LabVIEW Library
 
 <p align="center">
     <img width="100%" alt="Yaskawa LabVIEW Library" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/banner.png" >
@@ -23,7 +23,7 @@
 
 ### 🤖 Effortlessly Communicate with Yaskawa robots
 
-The **Yaskawa SDK** enables seamless integration with Fanuc robots for automation, data exchange, and remote control. Ideal for industrial automation, research, and advanced robotics applications.
+The **Yaskawa SDK** enables seamless integration with Yaskawa robots for automation, data exchange, and remote control. Ideal for industrial automation, research, and advanced robotics applications.
 
 It allows you to connect to a **real robot**.
 

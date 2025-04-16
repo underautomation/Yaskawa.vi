@@ -57,7 +57,156 @@ A powerful and efficient LabVIEW library for communicating with Yaskawa Motoman 
 
 
 
+## 📥 Download Example Applications
 
+Explore the **Yaskawa SDK** with fully functional example applications for your LabVIEW version.
+
+📌 **Download:** [📥 UnderAutomation.Yaskawa.lvproj](https://github.com/underautomation/Yaskawa.vi/releases)
+
+
+<p align="center">
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-connect-to-robot.png" >
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-alarms-and-status.png" >
+</p>
+<p align="center">
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-servo-job.png" >
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-file-handling.png" >
+</p>
+<p align="center">
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-positon-move.png" >
+    <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-read-write-registers.png" >
+</p>
+
+---
+## 📌 Features
+The library is a set of .vi files grouped under a library ```UnderAutomation.Yaskawa.lvlib```.
+
+📌 **Download:** [📥 UnderAutomation.Yaskawa.lvlib](https://github.com/underautomation/Yaskawa.vi/releases)
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/project.png" >
+</p>
+
+### 🖧 **Connect to the robot**
+```ConnectToRobot.vi``` allows you to connect to the robot using its IP address.
+
+This VI returns an instance of the robot the High-Speed Ethernet Server protocol. These returned values are to be used as input to the VIs described below.
+
+![Connect to robot](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/connect-to-robot.png)
+
+---
+
+### Alarm
+
+#### Alarm Reset
+![alarm-reset](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/alarm-reset.png)
+
+#### Get Alarm
+![get-alarm](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-alarm.png)
+
+---
+
+### File
+
+#### Delete File
+![delete-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/delete-file.png)
+
+#### Get File
+![get-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file.png)
+
+#### Get File List
+![get-file-list](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file-list.png)
+
+#### Load File
+![load-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/load-file.png)
+
+---
+
+### Job
+
+#### Get Executing Job Information
+![get-executing-job-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-executing-job-information.png)
+
+#### Select Job
+![select-job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/select-job.png)
+
+#### Start Job
+![start-job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/start-job.png)
+
+---
+
+### Position
+
+#### Get Cartesian Position
+![get-cartesian-position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-cartesian-position.png)
+
+#### Get Joint Position
+![get-joint-position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-joint-position.png)
+
+#### Move Cartesian
+![move-cartesian](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-cartesian.png)
+
+#### Move Joints
+![move-joints](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-joints.png)
+
+
+---
+
+### Status
+
+#### Get Status Information
+![get-status-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-status-information.png)
+
+#### Get System Information
+![get-system-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-system-information.png)
+
+#### Get Torque
+![get-torque](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-torque.png)
+
+---
+
+### Display
+
+#### Display
+![display](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/display.png)
+
+---
+
+### Read/Write
+
+#### Read IO
+
+![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-io.png)
+
+#### Read Registers
+- 16 Bytes Char
+- 32 Bytes Char
+- Byte
+- Double
+- Integer
+- Register
+- Single
+
+![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-registers.png)
+
+
+#### Read position
+- Base Position
+- External Position
+- Position Variable
+
+![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-position-variables.png)
+
+
+---
+
+### Commands
+
+#### Servo Command
+![servo-command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/servo-command.png)
+
+#### Switching Command
+![switching-command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/switching-command.png)
 
 
 ---

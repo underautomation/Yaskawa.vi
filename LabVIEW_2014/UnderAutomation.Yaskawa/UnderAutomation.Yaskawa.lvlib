@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="14008000">
 	<Property Name="NI.Lib.Icon" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*&amp;!!!*Q(C=\&gt;5^4C."%)&lt;B&lt;^%'J,Y"[SP5&amp;8Q&amp;8[%#*'+H'TJ@%&gt;4O#&lt;"%B)B]A%EK)-':L_!LT,\&gt;&amp;,:*=!)))&lt;JJO`V.`TS?'1^3,_@34YWHSP"K'5=.6!WNN@L5(Y&lt;K(BU@DI^L@\S[@@ZBW0/)J_-[4/J^\6^@TH`O(^Z0_U]5@:@P]L8,\Z-`AH@`(@RIP_32FL3A/=X5NBW40-G40-G40-G$0-C$0-C$0-C&gt;X-G&gt;X-G&gt;X-G.X-C.X-C.X-B\*2?ZS%5/+&gt;E]W3B:.&amp;EA'1R&amp;S5PC34S**`(Q59EH]33?R*.Y'+,%EXA34_**0%R4YEE]C3@R*"[7[J,MF2R0YG&amp;Z":\!%XA#4_"B3Q7?!""M&amp;CQ=,!*$Q='A%XA#4_#BK]!4?!*0Y!E](&amp;&lt;A#4S"*`!%(K&lt;UMR*&gt;USIZ(J;2YX%]DM@R/"[7FO.R0)\(]4A?NJ0D=4Q/QNH172S#H%H/!/?$YX%]P-HR/"\(YXA=$Y@[&amp;@*_:JKG68)]BM@Q'"\$9XB91I&lt;(]"A?QW.Y7&amp;;'R`!9(M.D?.B+BM@Q'"Y$9GT+^D)7-S9;AYT!]0$8\R&lt;L6SG[R(K6[O:6X:3KGUVV%[FO$N6&amp;6VV-V563H8T6367&gt;,.6*5(UZ&amp;6K&amp;57WCGNQ';M@LFL;GL7B,WI)WJ]VI5^KE48XDA&lt;P&gt;4NPN6OPV7KP63MPF5IP&amp;1P0Z8,0:4.0J6*0*:0]9O+$O(QC(Z^,.^&lt;_\G`O`&gt;ZM`F\=0D_?`.N&gt;86R`U``E40"NVJO-^/%@`!?/X@RA!!!!!</Property>
 	<Property Name="NI.Lib.Version" Type="Str">2.0.0.0</Property>
@@ -28,7 +28,7 @@
 		<Item Name="Read32BytesChar.vi" Type="VI" URL="../HighSpeedEServer/Read32BytesChar.vi"/>
 		<Item Name="ReadBasePosition.vi" Type="VI" URL="../HighSpeedEServer/ReadBasePosition.vi"/>
 		<Item Name="ReadByte.vi" Type="VI" URL="../HighSpeedEServer/ReadByte.vi"/>
-		<Item Name="ReadDouble.vi" Type="VI" URL="../HighSpeedEServer/ReadDouble.vi"/>
+		<Item Name="ReadDoubleInteger.vi" Type="VI" URL="../HighSpeedEServer/ReadDoubleInteger.vi"/>
 		<Item Name="ReadExternalPosition.vi" Type="VI" URL="../HighSpeedEServer/ReadExternalPosition.vi"/>
 		<Item Name="ReadInteger.vi" Type="VI" URL="../HighSpeedEServer/ReadInteger.vi"/>
 		<Item Name="ReadIO.vi" Type="VI" URL="../HighSpeedEServer/ReadIO.vi"/>

@@ -15,3 +15,6 @@
 *.lvlps
 .cache/
 /LabVIEW_2024/config.ini
+
+# Release artifacts
+*.zip

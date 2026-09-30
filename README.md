@@ -1,68 +1,40 @@
-# Yaskawa LabVIEW Library
+# Yaskawa Robot Communication SDK for LabVIEW
 
 <p align="center">
     <img width="100%" alt="Yaskawa LabVIEW Library" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/banner.png" >
 </p>
 
+[![LabVIEW](https://img.shields.io/badge/LabVIEW-2010_to_2024-yellow)](#compatibility)
+[![License](https://img.shields.io/badge/license-commercial-blue)](https://underautomation.com/yaskawa/eula)
 
-[![LABView 2010](https://img.shields.io/badge/LABView-2010-yellow?logo=LabVIEW)](#)
-[![LABView 2011](https://img.shields.io/badge/LABView-2011-yellow?logo=LabVIEW)](#)
-[![LABView 2012](https://img.shields.io/badge/LABView-2012-yellow?logo=LabVIEW)](#)
-[![LABView 2013](https://img.shields.io/badge/LABView-2013-yellow?logo=LabVIEW)](#)
-[![LABView 2014](https://img.shields.io/badge/LABView-2014-yellow?logo=LabVIEW)](#)
-[![LABView 2015](https://img.shields.io/badge/LABView-2015-yellow?logo=LabVIEW)](#)
-[![LABView 2016](https://img.shields.io/badge/LABView-2016-yellow?logo=LabVIEW)](#)
-[![LABView 2017](https://img.shields.io/badge/LABView-2017-yellow?logo=LabVIEW)](#)
-[![LABView 2018](https://img.shields.io/badge/LABView-2018-yellow?logo=LabVIEW)](#)
-[![LABView 2019](https://img.shields.io/badge/LABView-2019-yellow?logo=LabVIEW)](#)
-[![LABView 2020](https://img.shields.io/badge/LABView-2020-yellow?logo=LabVIEW)](#)
-[![LABView 2021](https://img.shields.io/badge/LABView-2021-yellow?logo=LabVIEW)](#)
-[![LABView 2022](https://img.shields.io/badge/LABView-2022-yellow?logo=LabVIEW)](#)
-[![LABView 2023](https://img.shields.io/badge/LABView-2023-yellow?logo=LabVIEW)](#)
-[![LABView 2024](https://img.shields.io/badge/LABView-2024-yellow?logo=LabVIEW)](#)
+**UnderAutomation.Yaskawa for LabVIEW** is a library of VIs that communicates with Yaskawa Motoman robot
+controllers (**YRC1000 (micro)**, **MOTOMAN NEXT**, **DX100 / DX200**, **FS100**, **ERC / XRC / MRC**) through the **High Speed Ethernet Server** (HSES) of
+the controller, over UDP. Nothing is installed on the controller, no Yaskawa option is needed.
 
-### 🤖 Effortlessly Communicate with Yaskawa robots
+The VIs call the .NET library `UnderAutomation.Yaskawa.dll`, which is included in the package. Use them
+to read the status, the alarms and the positions, move the robot, select and start jobs, read variables
+and I/O, and transfer files.
 
-The **Yaskawa SDK** enables seamless integration with Yaskawa robots for automation, data exchange, and remote control. Ideal for industrial automation, research, and advanced robotics applications.
+- Product page: [underautomation.com/yaskawa](https://underautomation.com/yaskawa)
+- Documentation: [underautomation.com/yaskawa/documentation/get-started-labview](https://underautomation.com/yaskawa/documentation/get-started-labview)
+- Also available for .NET: [Yaskawa.NET](https://github.com/underautomation/Yaskawa.NET), and Python: [Yaskawa.py](https://github.com/underautomation/Yaskawa.py).
 
-It allows you to connect to a **real robot**.
+## Installation
 
-🔗 **More Information:** [https://underautomation.com/yaskawa](https://underautomation.com/yaskawa)  
-🔗 Also available for **[💻 .NET](https://github.com/underautomation/Yaskawa.NET)** & **[🐍 Python](https://github.com/underautomation/yaskawa.py)**
+Download the zip of your LabVIEW version, `UnderAutomation.Yaskawa_LabVIEW_<year>.zip`, from the
+[releases page](https://github.com/underautomation/Yaskawa.vi/releases), or clone this repository. Each
+`LabVIEW_<year>` folder contains:
 
----
+- `UnderAutomation.Yaskawa.lvproj`: the project, with the example `Examples/1. Main demo.vi`;
+- `UnderAutomation.Yaskawa/UnderAutomation.Yaskawa.lvlib`: the library of VIs;
+- `UnderAutomation.Yaskawa/lib/UnderAutomation.Yaskawa.dll`: the .NET library called by the VIs.
 
-**⭐ Star if you like it !**
+On Windows, unblock the zip file before you extract it (right-click, "Properties", "Unblock").
 
-**👁️ Watch to be notified of latest updates !**
+## Example application
 
----
-
-## 🚀 TL;DR (Too Long; Didn’t Read)
-
-A powerful and efficient LabVIEW library for communicating with Yaskawa Motoman industrial robots using the High-Speed Ethernet Server (HSES) protocol. Enables seamless connectivity, motion control, and data acquisition.
-
-✅ No additional installations or Yaskawa options are required to use this SDK.
-
-**Key Benefits:**
-
-- 📡 **Fast & Reliable**: Leverage high-speed UDP communication for real-time control.
-- 🛠️ **Easy Integration**: Works with .NET projects, compatible with VB.NET and C#.
-- 🤖 **Advanced Features**: Supports status monitoring, alarm handling, job selection, and more.
-- 🌎 **Cross-Platform**: Works with Windows/Linux using .NET Core.
-
----
-
-
-
-
-
-## 📥 Download Example Applications
-
-Explore the **Yaskawa SDK** with fully functional example applications for your LabVIEW version.
-
-📌 **Download:** [📥 UnderAutomation.Yaskawa.lvproj](https://github.com/underautomation/Yaskawa.vi/releases)
-
+`Examples/1. Main demo.vi` connects to the robot and shows the main features: status and alarms, servo and
+jobs, files, positions and motion, registers.
 
 <p align="center">
     <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-connect-to-robot.png" >
@@ -77,168 +49,104 @@ Explore the **Yaskawa SDK** with fully functional example applications for your 
     <img height="250" src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/main-demo-read-write-registers.png" >
 </p>
 
----
-## 📌 Features
-The library is a set of .vi files grouped under a library ```UnderAutomation.Yaskawa.lvlib```.
+## Features
 
-📌 **Download:** [📥 UnderAutomation.Yaskawa.lvlib](https://github.com/underautomation/Yaskawa.vi/releases)
+The VIs are grouped in the library `UnderAutomation.Yaskawa.lvlib`.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/project.png" >
 </p>
 
-### 🖧 **Connect to the robot**
-```ConnectToRobot.vi``` allows you to connect to the robot using its IP address.
+### Connection and license
 
-This VI returns an instance of the robot the High-Speed Ethernet Server protocol. These returned values are to be used as input to the VIs described below.
+`ConnectToRobot.vi` connects to the robot with its IP address. It returns the robot reference used as
+input by the other VIs. `RegisterLicense.vi` registers your license key.
 
 ![Connect to robot](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/connect-to-robot.png)
 
----
+### Alarms
 
-### Alarm
+`AlarmReset.vi` resets the alarms. `GetAlarm.vi` reads one of the last alarms.
 
-#### Alarm Reset
-![alarm-reset](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/alarm-reset.png)
+![Alarm reset](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/alarm-reset.png)
+![Get alarm](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-alarm.png)
 
-#### Get Alarm
-![get-alarm](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-alarm.png)
+### Files
 
----
+`GetFileList.vi`, `GetFile.vi`, `LoadFile.vi` and `DeleteFile.vi` list, download, upload and delete the
+files of the controller.
 
-### File
+![Get file list](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file-list.png)
+![Get file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file.png)
+![Load file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/load-file.png)
+![Delete file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/delete-file.png)
 
-#### Delete File
-![delete-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/delete-file.png)
+### Jobs
 
-#### Get File
-![get-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file.png)
+`SelectJob.vi` and `StartJob.vi` select and start a job. `GetExecutingJobInformation.vi` reads the name,
+the line and the step of the executing job.
 
-#### Get File List
-![get-file-list](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-file-list.png)
+![Select job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/select-job.png)
+![Start job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/start-job.png)
+![Get executing job information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-executing-job-information.png)
 
-#### Load File
-![load-file](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/load-file.png)
+### Positions and motion
 
----
+`GetCartesianPosition.vi` and `GetJointPosition.vi` read the position of the robot. `MoveCartesian.vi` and
+`MoveJoints.vi` move it.
 
-### Job
+![Get Cartesian position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-cartesian-position.png)
+![Get joint position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-joint-position.png)
+![Move Cartesian](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-cartesian.png)
+![Move joints](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-joints.png)
 
-#### Get Executing Job Information
-![get-executing-job-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-executing-job-information.png)
+### Status and system
 
-#### Select Job
-![select-job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/select-job.png)
+`GetStatusInformation.vi`, `GetSystemInformation.vi` and `GetTorque.vi` read the status of the controller,
+its software version and the torque of each axis. `Display.vi` shows a message on the pendant.
 
-#### Start Job
-![start-job](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/start-job.png)
+![Get status information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-status-information.png)
+![Get system information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-system-information.png)
+![Get torque](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-torque.png)
+![Display](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/display.png)
 
----
+### Variables and I/O
 
-### Position
+`ReadIO.vi` reads the I/O signals. Other VIs read the variables: registers, byte, integer, double
+integer, real (`ReadSingle.vi`) and string variables (16 and 32 bytes), position variables, base and
+external axis positions.
 
-#### Get Cartesian Position
-![get-cartesian-position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-cartesian-position.png)
-
-#### Get Joint Position
-![get-joint-position](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-joint-position.png)
-
-#### Move Cartesian
-![move-cartesian](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-cartesian.png)
-
-#### Move Joints
-![move-joints](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/move-joints.png)
-
-
----
-
-### Status
-
-#### Get Status Information
-![get-status-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-status-information.png)
-
-#### Get System Information
-![get-system-information](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-system-information.png)
-
-#### Get Torque
-![get-torque](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/get-torque.png)
-
----
-
-### Display
-
-#### Display
-![display](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/display.png)
-
----
-
-### Read/Write
-
-#### Read IO
-
-![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-io.png)
-
-#### Read Registers
-- 16 Bytes Char
-- 32 Bytes Char
-- Byte
-- Double
-- Integer
-- Register
-- Single
-
-![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-registers.png)
-
-
-#### Read position
-- Base Position
-- External Position
-- Position Variable
-
-![read-io](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-position-variables.png)
-
-
----
+![Read IO](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-io.png)
+![Read registers](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-registers.png)
+![Read position variables](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/read-position-variables.png)
 
 ### Commands
 
-#### Servo Command
-![servo-command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/servo-command.png)
+`ServoCommand.vi` switches the servo on and off. `SwitchingCommand.vi` selects the cycle mode (cycle,
+step, continuous).
 
-#### Switching Command
-![switching-command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/switching-command.png)
+![Servo command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/servo-command.png)
+![Switching command](https://raw.githubusercontent.com/underautomation/Yaskawa.vi/refs/heads/main/.github/assets/switching-command.png)
 
+The commands (servo, motion, job start, file write) need the remote mode on the controller. The settings
+are described in the [Yaskawa.NET README](https://github.com/underautomation/Yaskawa.NET#configure-the-robot).
 
----
+## Compatibility
 
-## 🔍 Compatibility
+- **LabVIEW:** 2010 to 2024, one folder per version.
+- **Operating system:** Windows.
+- **Controllers:** Yaskawa YRC1000 (micro), MOTOMAN NEXT, DX100 / DX200, FS100, ERC / XRC / MRC, with the High Speed Ethernet Server.
 
-✅ **Supported Robots:** DX200, YRC1000, YRC1000 Micro
-✅ **Operating Systems:** Windows  
-✅ **LabVIEW Versions:** LV2010 and newer  
+## License
 
----
+This SDK needs a commercial license. A 30-day trial starts at the first use, no key needed.
 
-## 📢 Contributing
+- License agreement: [underautomation.com/yaskawa/eula](https://underautomation.com/yaskawa/eula) and [License.md](License.md)
+- Trial key: [underautomation.com/license](https://underautomation.com/license?sdk=yaskawa)
+- Prices and quote: [underautomation.com/yaskawa](https://underautomation.com/yaskawa)
 
-We welcome contributions! Feel free to:
+## Support
 
-- Report issues via [GitHub Issues](https://github.com/underautomation/Yaskawa.vi/issues)
-- Submit pull requests with improvements
-- Share feedback & feature requests
-
----
-
-## 📜 License
-
-**⚠️ This SDK requires a commercial license.**  
-🔗 Learn more: [UnderAutomation Licensing](https://underautomation.com/yaskawa/eula)
-
----
-
-## 📬 Need Help?
-
-If you have any questions or need support:
-
-- 📖 **Check the Docs**: [Documentation](https://underautomation.com/yaskawa/documentation)
-- 📩 **Contact Us**: [Support](https://underautomation.com/contact)
+- Documentation: [underautomation.com/yaskawa/documentation](https://underautomation.com/yaskawa/documentation)
+- Issues: [GitHub Issues](https://github.com/underautomation/Yaskawa.vi/issues)
+- Contact: [underautomation.com/contact](https://underautomation.com/contact)
